@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 const choices =[
     { "id": 1, "label": "JavaScript", "votes": 0 },
 
-    { "id": 2, "label": "Python", "votes": 0 },
+    { "id": 2, "label": "Python", "votes": 5 },
 
-    { "id": 3, "label": "Java", "votes": 0 },
+    { "id": 3, "label": "Java", "votes": 7},
 
     { "id": 4, "label": "C#", "votes": 0 }]
 

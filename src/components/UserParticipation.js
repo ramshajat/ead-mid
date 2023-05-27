@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PollDisplayComponent from './PollDisplayComponent'
+import ThankyouMessage from './ThankyouMessage'
 function UserParticipation() {
 //  const[count,setcount]=useState(0);
 //  useEffect(() => {
@@ -12,6 +13,7 @@ function UserParticipation() {
     <div>
         <PollDisplayComponent></PollDisplayComponent>
         <div>{choice}</div>
+        <ThankyouMessage></ThankyouMessage>
     </div>
   )
 }
