@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import UserParticipation from './UserParticipation'
+import ThankyouMessage from './ThankyouMessage';
 
 
 function AnotherUserParticipant() {
@@ -13,6 +14,7 @@ function AnotherUserParticipant() {
     <div>
         <UserParticipation></UserParticipation>
         <button onClick={handlesubmit}>submit</button>
+       
     </div>
   )
 }
