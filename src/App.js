@@ -8,16 +8,16 @@ import ThankyouMessage from './components/ThankyouMessage';
 import { useState } from 'react';
 import Timer from './components/Timmer';
 function App() {
-  const [selItem, setSelItem] = useState(null);
-  const handleChange = (item) => {
-    item === selItem ? setSelItem(null) : setSelItem(item);
-  };
+  // const [selItem, setSelItem] = useState(null);
+  // const handleChange = (item) => {
+  //   item === selItem ? setSelItem(null) : setSelItem(item);
+  // };
   return (
     <div className="App">
       <Routes>
       {/* <Route path='/' element={<PollDisplayComponent/>} /> */}
-      {/* <Route path='/' element={<UserParticipation/>} />
-      <Route path='/' element={<ThankyouMessage/>}/> */}
+       {/* <Route path='/' element={<UserParticipation/>} />
+      <Route path='/' element={<ThankyouMessage/>}/>  */}
       {/* <Route path='/' element={<AnotherUserParticipant/>} /> */}
       <Route path='/' element={<Timer/>}/>
       </Routes>

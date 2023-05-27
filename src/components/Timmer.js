@@ -1,32 +1,33 @@
-import React, { useRef, useEffect, useState } from "react";
-
-export default function Timmer() {
-  const [num, setNum] = useState(10);
-  const [pause, setPause] = useState(false);
+import React from "react";
+import { useState,useEffect } from "react";
+const Timmer = () => {
+    const [time, setTime] = useState(10); 
   
-  let intervalRef = useRef();
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTime(prevTime => prevTime - 1);
+      }, 1000);
   
-  const decreaseNum = () => setNum((prev) => prev - 1);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(decreaseNum, 1000);
-
-    return () => clearInterval(intervalRef.current);
-  }, []);
+      if (time === 0) {
+        clearInterval(interval);
+          
+        setTime(0);
+      }
   
-  const handleClick = () => {
-    if (!pause) {
-      clearInterval(intervalRef.current);
-    } else {
-      intervalRef.current = setInterval(decreaseNum, 1000);
-    }
-    setPause((prev) => !prev);
-  };
+      return () => clearInterval(interval);
+    }, [time]);
   
-  return (
-    <div>
-      <div>{num}</div>
-      <button onClick={handleClick}>{pause ? "Run" : "Pause"}</button>
+    return (
+      <div>
+      {time === 0 ? (
+        <h1>Time UP!</h1>
+      ) : (
+        <h1>Time: {time}</h1>
+      )}
     </div>
   );
-}
+  };
+  
+  
+  
+  export default Timmer;
